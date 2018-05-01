@@ -13,6 +13,7 @@
 #define SCREEN_FRAME        60
 
 const std::string Path_Texture           = "Assets/Textures/";
+const std::string Path_Font              = "Assets/Fonts/";
 
 
 #endif  //  _CommonData_HPP_

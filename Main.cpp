@@ -9,6 +9,7 @@
 
 int main(int argc, char* argv[])
 {
+    srand(time(nullptr));
     Goku::Application application;
 
     application.run();

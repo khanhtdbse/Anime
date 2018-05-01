@@ -13,8 +13,16 @@ namespace Goku
     {
     protected:
         sf::RenderWindow*        m_window;
+        ado::AssetsManager       m_assets;
 
     public:
+        enum Type
+        {
+            Intro,
+            GamePlay,
+            GameOver
+        };
+        Type                    m_type;
 
         virtual void       handleEvent() = 0;
         virtual void       update() = 0;

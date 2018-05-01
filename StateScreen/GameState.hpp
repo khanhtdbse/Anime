@@ -8,6 +8,8 @@
 #include "BaseStateScreen.hpp"
 #include "../Entity/PlayerGoku.hpp"
 #include "../CommonData.hpp"
+#include "../Entity/Monster.hpp"
+#include "../Entity/Explosition.hpp"
 
 namespace Goku
 {
@@ -17,8 +19,17 @@ namespace Goku
         bool                   m_live;
 
         PlayerGoku*            m_player;
-        ado::AssetsManager     m_assets;
+        
+        std::list<Monster>     m_monster;
 
+        sf::Clock              m_clock;
+
+        sf::Text               m_text;
+        unsigned int           m_score = 0;
+        std::list<Explosition> m_explosition;
+        void          checkCollision();
+
+        
     public:
         GameState     (sf::RenderWindow* window);
         
